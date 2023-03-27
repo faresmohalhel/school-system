@@ -40,6 +40,20 @@ const renderStudent = function (
   cardContainer.appendChild(card);
 };
 
+if (window.localStorage.getItem("users")) {
+  const storageUsersLoad = JSON.parse(window.localStorage.getItem("users"));
+  storageUsersLoad.forEach((element, i) => {
+    renderStudent(
+      element.username,
+      element.dateOfBirth,
+      element.gender,
+      element.major,
+      element.imageURL,
+      element.phone
+    );
+  });
+}
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const userInfo = {
