@@ -158,9 +158,20 @@
             />
             <label for="phone">Enter your phone number:</label>
           </div>
+
           <div class="flex flex-col-reverse lg:w-1/2 w-full">
-            <input type="text" placeholder="Grade" name="grade" />
-            <label for="grade">Grade</label>
+            <select name="majorSelect" id="majorSelect">
+              <option value="Administration">Administration</option>
+              <option value="IT">IT</option>
+              <option value="Science">Science</option>
+              <option value="Art">Art</option>
+            </select>
+            <label for="majorSelect">Select a Major</label>
+          </div>
+
+          <div class="flex flex-col-reverse lg:w-1/2 w-full">
+            <input type="text" placeholder="ImageURL" name="imageURL" />
+            <label for="imageURL">ImageURL</label>
           </div>
           <button
             class="border border-gray-700 rounded-lg p-3 bg-white hover:bg-slate-100 duration-200"
@@ -170,7 +181,9 @@
           </button>
         </form>
       </div>
-      <table class="shadow-md rounded-lg text-sm lg:text-base">
+      <div id="cardContainer" class="flex flex-col lg:flex-row flex-wrap"></div>
+
+      <!-- <table class="shadow-md rounded-lg text-sm lg:text-base">
         <thead class="bg-sky-300">
           <tr>
             <th>Full Name</th>
@@ -181,7 +194,7 @@
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
-      </table>
+      </table> -->
     </main>
     <footer
       class="w-screen min-h-[5rem] flex bg-gray-900 justify-center space-x-10 items-center"
